@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby "1.9.3" 
 
 gem 'rails', '3.2.13'
  
@@ -6,13 +7,15 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # gem 'sqlite3'
-gem 'mysql2'
+gem 'mysql2', group: :development
+gem 'pg', group: :production
 gem 'devise'
 gem 'jquery-star-rating-rails'
 gem 'will_paginate', '~> 3.0' # paginations
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'rails_12factor', group: :production
 
 # Gems used only for assets and not required
 # in production environments by default.
